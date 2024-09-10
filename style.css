@@ -1,10 +1,12 @@
 :root {
-  /*colors */
-
+  /* Colors */
   --clr-bg: hsl(210, 46%, 95%);
   --clr-main-txt: hsl(217, 19%, 35%);
   --clr-p-txt: hsl(214, 17%, 51%);
   --clr-date-txt: hsl(212, 23%, 69%);
+  --clr-white: #fff;
+  /* White color for background */
+  --clr-footer-border: #eaeaea;
 
 
 }
@@ -28,9 +30,12 @@ img {
 }
 
 .main-container {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+  background-color: var(--clr-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-picture {
@@ -47,15 +52,17 @@ img {
 }
 
 .article-heading-text h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.3;
   margin: 0;
+  color: var(--clr-main-txt);
 }
 
 .article-paragraph-text p {
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 10px;
+  color: var(--clr-p-txt);
 }
 
 .footer-container {
@@ -64,7 +71,7 @@ img {
   justify-content: space-between;
   margin-top: 20px;
   padding: 10px 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--clr-footer-border);
 }
 
 .author-container {
@@ -81,6 +88,7 @@ img {
 
 .author-name {
   font-weight: bold;
+  color: var(--clr-date-txt);
 }
 
 .published-date {
@@ -99,6 +107,8 @@ img {
 
 .share-options {
   display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   right: 0;
@@ -107,6 +117,7 @@ img {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .share-options a {
@@ -119,4 +130,12 @@ img {
   width: 24px;
   height: 24px;
   vertical-align: middle;
+}
+
+/* show sharre option when clicked */
+
+.share-button.active+.share-options {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
