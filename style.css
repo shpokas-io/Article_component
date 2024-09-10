@@ -118,6 +118,8 @@ img {
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .share-options a {
@@ -135,7 +137,37 @@ img {
 /* show sharre option when clicked */
 
 .share-button.active+.share-options {
-  display: block;
+  display: flex;
   opacity: 1;
   visibility: visible;
+}
+
+/* adding media queries for dekstop design */
+
+@media (min-width:768px) {
+  .main-container {
+    padding: 40px;
+  }
+
+  .article-heading-text h1 {
+    font-size: 2rem;
+  }
+
+  .article-paragraph-text p {
+    font-size: 1.125rem;
+
+  }
+
+  .footer-container {
+    padding: 20px 0;
+  }
+
+  .author-image-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .share-options {
+    top: 110%;
+  }
 }
