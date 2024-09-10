@@ -8,18 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     shareButton.classList.toggle("active");
 
     if (shareButton.classList.contains("active")) {
-      // Show share options
       shareOptions.style.display = "block";
       setTimeout(() => {
         shareOptions.style.opacity = "1";
         shareOptions.style.visibility = "visible";
-        shareOptions.style.transform = "translateY(0)"; // Slide up for mobile
+        shareOptions.style.transform = "translateY(0)"; // Slide up
       }, 10);
     } else {
-      // Hide share options
       shareOptions.style.opacity = "0";
       shareOptions.style.visibility = "hidden";
-      shareOptions.style.transform = "translateY(100%)"; // Slide back down for mobile
+      shareOptions.style.transform = "translateY(100%)"; // Slide down
 
       shareOptions.addEventListener(
         "transitionend",
