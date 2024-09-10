@@ -7,6 +7,8 @@
   --clr-white: #fff;
   /* White color for background */
   --clr-footer-border: #eaeaea;
+  /* Grayish background for the share button */
+  --clr-share-button-bg: hsl(210, 46%, 85%);
 
 
 }
@@ -103,6 +105,16 @@ img {
 
 .share-button {
   cursor: pointer;
+  background-color: var(--clr-share-button-bg);
+  border: none;
+  border-radius: 50%;
+  padding: 11px;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: hsl(210, 46%, 75%);
+
 }
 
 .share-options {
@@ -132,6 +144,7 @@ img {
   width: 24px;
   height: 24px;
   vertical-align: middle;
+  bottom: 100%;
 }
 
 /* show sharre option when clicked */
