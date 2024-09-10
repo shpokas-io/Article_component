@@ -1,0 +1,18 @@
+:root {
+  /*colors */
+
+  --color-bg: hsl(210, 46%, 95%);
+  --clr-main-txt: hsl(217, 19%, 35%);
+  --clr-p-txt: hsl(214, 17%, 51%);
+  --clr-date-txt: hsl(212, 23%, 69%);
+
+
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling */
